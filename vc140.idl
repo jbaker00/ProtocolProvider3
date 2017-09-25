@@ -1,0 +1,61 @@
+import "C:\Program Files (x86)\Windows Kits\10\include\10.0.15063.0\um\prsht.idl";
+import "C:\Program Files (x86)\Windows Kits\10\include\10.0.15063.0\um\MsHTML.idl";
+import "c:\program files (x86)\windows kits\10\include\10.0.15063.0\um\dimm.idl";
+import "c:\program files (x86)\windows kits\10\include\10.0.15063.0\um\dispex.idl";
+import "C:\Program Files (x86)\Windows Kits\10\include\10.0.15063.0\shared\dxgitype.idl";
+import "c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\dxgicommon.idl";
+import "c:\program files (x86)\windows kits\10\include\10.0.15063.0\shared\dxgiformat.idl";
+import "C:\Program Files (x86)\Windows Kits\10\include\10.0.15063.0\um\MsHtmHst.idl";
+import "c:\program files (x86)\windows kits\10\include\10.0.15063.0\um\docobj.idl";
+import "C:\Program Files (x86)\Windows Kits\10\include\10.0.15063.0\um\ExDisp.idl";
+import "C:\Program Files (x86)\Windows Kits\10\include\10.0.15063.0\um\ObjSafe.idl";
+import "C:\Program Files (x86)\Windows Kits\10\include\10.0.15063.0\um\wtsprotocol.idl";
+
+[
+	object,
+	uuid(103FF9D9-8BC9-4ea8-8CD4-C1E627D04358),
+	dual,
+	helpstring("IObject1 Interface"),
+	pointer_default(unique)
+] 
+#line 16 "c:\\users\\jambak\\source\\comsrv\\myserver.cpp"
+interface IObject1 : IDispatch {
+#line 18 "c:\\users\\jambak\\source\\comsrv\\myserver.cpp"
+	HRESULT  GetANum([out,retval] int *pInt);
+#line 22 "c:\\users\\jambak\\source\\comsrv\\myserver.cpp"
+	HRESULT  CreateListener([in] WCHAR *wszListenerName, [out] IWRdsProtocolListener **pProtocolListener);
+#line 27 "c:\\users\\jambak\\source\\comsrv\\myserver.cpp"
+	HRESULT  Initialize([in] IWRdsProtocolSettings *pIWRdsSettings, [in] PWRDS_SETTINGS pWRdsSettings);
+#line 32 "c:\\users\\jambak\\source\\comsrv\\myserver.cpp"
+	HRESULT  NotifyServiceStateChange([in] WRDS_SERVICE_STATE *pTSServiceStateChange);
+#line 36 "c:\\users\\jambak\\source\\comsrv\\myserver.cpp"
+	HRESULT  NotifySessionOfServiceStart([in] WRDS_SESSION_ID *SessionId);
+#line 40 "c:\\users\\jambak\\source\\comsrv\\myserver.cpp"
+	HRESULT  NotifySessionOfServiceStop([in] WRDS_SESSION_ID *SessionId);
+#line 45 "c:\\users\\jambak\\source\\comsrv\\myserver.cpp"
+	HRESULT  NotifySessionStateChange([in] WRDS_SESSION_ID *SessionId, [in] ULONG EventId);
+#line 50 "c:\\users\\jambak\\source\\comsrv\\myserver.cpp"
+	HRESULT  NotifySettingsChange([in] PWRDS_SETTINGS pWRdsSettings);
+#line 54 "c:\\users\\jambak\\source\\comsrv\\myserver.cpp"
+	HRESULT  Uninitialize();
+};
+
+
+[ version(1.0), helpstring("MyServer 1.0 Type Library"), uuid(d46a93dd-97e0-3f9e-99c6-7ec11c3174cc) ]
+library MyServer
+{
+	importlib("stdole2.tlb");
+	importlib("olepro32.dll");
+
+	[
+		version(1.0),
+		uuid(15615078-523C-43A0-BE6F-651E78A89213),
+		helpstring("Object1 Class")
+	] 
+#line 68 "c:\\users\\jambak\\source\\comsrv\\myserver.cpp"
+	coclass CObject1 {
+		interface IObject1;
+	};
+
+}
+

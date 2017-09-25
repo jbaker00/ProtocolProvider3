@@ -1,0 +1,998 @@
+﻿// Created by Microsoft (R) C/C++ Compiler Version 14.11.25508.2 (038215d3).
+//
+// c:\users\jambak\source\comsrv\vc140.tlh
+//
+// C++ source equivalent of Win32 type library vc140.tlb
+// compiler-generated file created 09/14/17 at 16:59:37 - DO NOT EDIT!
+
+#pragma once
+#pragma pack(push, 8)
+
+#include <comdef.h>
+
+//
+// Forward references and typedefs
+//
+
+struct __declspec(uuid("d46a93dd-97e0-3f9e-99c6-7ec11c3174cc"))
+/* LIBID */ __MyServer;
+struct /* coclass */ CObject1;
+struct __declspec(uuid("103ff9d9-8bc9-4ea8-8cd4-c1e627d04358"))
+/* dual interface */ IObject1;
+struct __declspec(uuid("fcbc131b-c686-451d-a773-e279e230f540"))
+/* interface */ IWRdsProtocolListener;
+enum _WRDS_LISTENER_SETTING_LEVEL;
+struct _WRDS_LISTENER_SETTINGS;
+union _WRDS_LISTENER_SETTING;
+struct _WRDS_LISTENER_SETTINGS_1;
+struct __declspec(uuid("3ab27e5b-4449-4dc1-b74a-91621d4fe984"))
+/* interface */ IWRdsProtocolListenerCallback;
+struct __declspec(uuid("324ed94f-fdaf-4ff6-81a8-42abe755830b"))
+/* interface */ IWRdsProtocolConnection;
+struct __declspec(uuid("519fe83b-142a-4120-a3d5-a405d315281a"))
+/* interface */ IWRdsProtocolLogonErrorRedirector;
+enum _WTS_LOGON_ERROR_REDIRECTOR_RESPONSE;
+struct _WTS_CLIENT_DATA;
+struct _WTS_TIME_ZONE_INFORMATION;
+struct _WTS_SYSTEMTIME;
+struct _WTS_SOCKADDR;
+struct __MIDL___MIDL_itf_vc140_0002_1265_0001;
+union __MIDL___MIDL_itf_vc140_0002_1265_0004;
+struct __MIDL___MIDL_itf_vc140_0002_1265_0002;
+struct __MIDL___MIDL_itf_vc140_0002_1265_0003;
+struct _WTS_USER_CREDENTIAL;
+struct __declspec(uuid("1d6a145f-d095-4424-957a-407fae822d84"))
+/* interface */ IWRdsProtocolLicenseConnection;
+struct _WTS_LICENSE_CAPABILITIES;
+enum __MIDL___MIDL_itf_vc140_0002_1265_0011;
+struct _WTS_SESSION_ID;
+struct _WRDS_CONNECTION_SETTINGS;
+enum _WRDS_CONNECTION_SETTING_LEVEL;
+union _WRDS_CONNECTION_SETTING;
+struct _WRDS_CONNECTION_SETTINGS_1;
+struct _WTS_PROTOCOL_STATUS;
+struct _WTS_PROTOCOL_COUNTERS;
+struct _WTS_CACHE_STATS;
+union _WTS_CACHE_STATS_UN;
+struct _WTS_PROTOCOL_CACHE;
+struct __WTS_PROPERTY_VALUE;
+struct __MIDL___MIDL_itf_vc140_0002_1265_0007;
+union __MIDL___MIDL_itf_vc140_0002_1265_0010;
+struct __MIDL___MIDL_itf_vc140_0002_1265_0008;
+struct __MIDL___MIDL_itf_vc140_0002_1265_0009;
+struct __declspec(uuid("9ae85ce6-cade-4548-8feb-99016597f60a"))
+/* interface */ IWRdsProtocolShadowConnection;
+struct __declspec(uuid("e0667ce0-0372-40d6-adb2-a0f3322674d6"))
+/* interface */ IWRdsProtocolShadowCallback;
+struct __declspec(uuid("f1d70332-d070-4ef1-a088-78313536c2d6"))
+/* interface */ IWRdsProtocolConnectionCallback;
+struct _WTS_SMALL_RECT;
+typedef enum __MIDL___MIDL_itf_vc140_0002_1265_0011 WTS_CERT_TYPE;
+#if !defined(_WIN64)
+typedef __w64 unsigned long ULONG_PTR;
+#else
+typedef unsigned __int64 ULONG_PTR;
+#endif
+
+//
+// Smart pointer typedef declarations
+//
+
+_COM_SMARTPTR_TYPEDEF(IWRdsProtocolLogonErrorRedirector, __uuidof(IWRdsProtocolLogonErrorRedirector));
+_COM_SMARTPTR_TYPEDEF(IWRdsProtocolLicenseConnection, __uuidof(IWRdsProtocolLicenseConnection));
+_COM_SMARTPTR_TYPEDEF(IWRdsProtocolShadowCallback, __uuidof(IWRdsProtocolShadowCallback));
+_COM_SMARTPTR_TYPEDEF(IWRdsProtocolShadowConnection, __uuidof(IWRdsProtocolShadowConnection));
+_COM_SMARTPTR_TYPEDEF(IWRdsProtocolConnection, __uuidof(IWRdsProtocolConnection));
+_COM_SMARTPTR_TYPEDEF(IWRdsProtocolConnectionCallback, __uuidof(IWRdsProtocolConnectionCallback));
+_COM_SMARTPTR_TYPEDEF(IWRdsProtocolListenerCallback, __uuidof(IWRdsProtocolListenerCallback));
+_COM_SMARTPTR_TYPEDEF(IWRdsProtocolListener, __uuidof(IWRdsProtocolListener));
+_COM_SMARTPTR_TYPEDEF(IObject1, __uuidof(IObject1));
+
+//
+// Type library items
+//
+
+struct __declspec(uuid("15615078-523c-43a0-be6f-651e78a89213"))
+CObject1;
+    // [ default ] interface IObject1
+
+enum _WRDS_LISTENER_SETTING_LEVEL
+{
+    WRDS_LISTENER_SETTING_LEVEL_INVALID = 0,
+    WRDS_LISTENER_SETTING_LEVEL_1 = 1
+};
+
+#pragma pack(push, 4)
+
+struct _WRDS_LISTENER_SETTINGS_1
+{
+    unsigned long MaxProtocolListenerConnectionCount;
+    unsigned long SecurityDescriptorSize;
+    unsigned char * pSecurityDescriptor;
+};
+
+#pragma pack(pop)
+
+#pragma pack(push, 4)
+
+union _WRDS_LISTENER_SETTING
+{
+    struct _WRDS_LISTENER_SETTINGS_1 WRdsListenerSettings1;
+};
+
+#pragma pack(pop)
+
+#pragma pack(push, 4)
+
+struct _WRDS_LISTENER_SETTINGS
+{
+    enum _WRDS_LISTENER_SETTING_LEVEL WRdsListenerSettingLevel;
+    union _WRDS_LISTENER_SETTING WRdsListenerSetting;
+};
+
+#pragma pack(pop)
+
+enum _WTS_LOGON_ERROR_REDIRECTOR_RESPONSE
+{
+    WTS_LOGON_ERR_INVALID = 0,
+    WTS_LOGON_ERR_NOT_HANDLED = 1,
+    WTS_LOGON_ERR_HANDLED_SHOW = 2,
+    WTS_LOGON_ERR_HANDLED_DONT_SHOW = 3,
+    WTS_LOGON_ERR_HANDLED_DONT_SHOW_START_OVER = 4
+};
+
+struct __declspec(uuid("519fe83b-142a-4120-a3d5-a405d315281a"))
+IWRdsProtocolLogonErrorRedirector : IUnknown
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT OnBeginPainting ( );
+    HRESULT RedirectStatus (
+        LPWSTR pszMessage,
+        enum _WTS_LOGON_ERROR_REDIRECTOR_RESPONSE * pResponse );
+    HRESULT RedirectMessage (
+        LPWSTR pszCaption,
+        LPWSTR pszMessage,
+        unsigned int uType,
+        enum _WTS_LOGON_ERROR_REDIRECTOR_RESPONSE * pResponse );
+    HRESULT RedirectLogonError (
+        long ntsStatus,
+        long ntsSubstatus,
+        LPWSTR pszCaption,
+        LPWSTR pszMessage,
+        unsigned int uType,
+        enum _WTS_LOGON_ERROR_REDIRECTOR_RESPONSE * pResponse );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_OnBeginPainting ( ) = 0;
+      virtual HRESULT __stdcall raw_RedirectStatus (
+        /*[in]*/ LPWSTR pszMessage,
+        /*[out]*/ enum _WTS_LOGON_ERROR_REDIRECTOR_RESPONSE * pResponse ) = 0;
+      virtual HRESULT __stdcall raw_RedirectMessage (
+        /*[in]*/ LPWSTR pszCaption,
+        /*[in]*/ LPWSTR pszMessage,
+        /*[in]*/ unsigned int uType,
+        /*[out]*/ enum _WTS_LOGON_ERROR_REDIRECTOR_RESPONSE * pResponse ) = 0;
+      virtual HRESULT __stdcall raw_RedirectLogonError (
+        /*[in]*/ long ntsStatus,
+        /*[in]*/ long ntsSubstatus,
+        /*[in]*/ LPWSTR pszCaption,
+        /*[in]*/ LPWSTR pszMessage,
+        /*[in]*/ unsigned int uType,
+        /*[out]*/ enum _WTS_LOGON_ERROR_REDIRECTOR_RESPONSE * pResponse ) = 0;
+};
+
+#pragma pack(push, 2)
+
+struct _WTS_SYSTEMTIME
+{
+    unsigned short wYear;
+    unsigned short wMonth;
+    unsigned short wDayOfWeek;
+    unsigned short wDay;
+    unsigned short wHour;
+    unsigned short wMinute;
+    unsigned short wSecond;
+    unsigned short wMilliseconds;
+};
+
+#pragma pack(pop)
+
+#pragma pack(push, 4)
+
+struct _WTS_TIME_ZONE_INFORMATION
+{
+    long Bias;
+    unsigned short StandardName[32];
+    struct _WTS_SYSTEMTIME StandardDate;
+    long StandardBias;
+    unsigned short DaylightName[32];
+    struct _WTS_SYSTEMTIME DaylightDate;
+    long DaylightBias;
+};
+
+#pragma pack(pop)
+
+#pragma pack(push, 4)
+
+struct __MIDL___MIDL_itf_vc140_0002_1265_0002
+{
+    unsigned short sin_port;
+    unsigned long in_addr;
+    unsigned char sin_zero[8];
+};
+
+#pragma pack(pop)
+
+#pragma pack(push, 4)
+
+struct __MIDL___MIDL_itf_vc140_0002_1265_0003
+{
+    unsigned short sin6_port;
+    unsigned long sin6_flowinfo;
+    unsigned short sin6_addr[8];
+    unsigned long sin6_scope_id;
+};
+
+#pragma pack(pop)
+
+#pragma pack(push, 4)
+
+union __MIDL___MIDL_itf_vc140_0002_1265_0004
+{
+    struct __MIDL___MIDL_itf_vc140_0002_1265_0002 ipv4;
+    struct __MIDL___MIDL_itf_vc140_0002_1265_0003 ipv6;
+};
+
+#pragma pack(pop)
+
+#pragma pack(push, 4)
+
+struct __MIDL___MIDL_itf_vc140_0002_1265_0001
+{
+    unsigned short sin_family;
+    union __MIDL___MIDL_itf_vc140_0002_1265_0004 u;
+};
+
+#pragma pack(pop)
+
+#pragma pack(push, 4)
+
+struct _WTS_SOCKADDR
+{
+    unsigned short sin_family;
+    struct __MIDL___MIDL_itf_vc140_0002_1265_0001 __MIDL____MIDL_itf_vc140_0002_12650000;
+};
+
+#pragma pack(pop)
+
+#pragma pack(push, 4)
+
+struct _WTS_CLIENT_DATA
+{
+    char fDisableCtrlAltDel;
+    char fDoubleClickDetect;
+    char fEnableWindowsKey;
+    char fHideTitleBar;
+    long fInheritAutoLogon;
+    char fPromptForPassword;
+    char fUsingSavedCreds;
+    unsigned short Domain[256];
+    unsigned short UserName[256];
+    unsigned short Password[256];
+    char fPasswordIsScPin;
+    long fInheritInitialProgram;
+    unsigned short WorkDirectory[257];
+    unsigned short InitialProgram[257];
+    char fMaximizeShell;
+    unsigned char EncryptionLevel;
+    unsigned long PerformanceFlags;
+    unsigned short ProtocolName[9];
+    unsigned short ProtocolType;
+    long fInheritColorDepth;
+    unsigned short HRes;
+    unsigned short VRes;
+    unsigned short ColorDepth;
+    unsigned short DisplayDriverName[9];
+    unsigned short DisplayDeviceName[20];
+    char fMouse;
+    unsigned long KeyboardLayout;
+    unsigned long KeyboardType;
+    unsigned long KeyboardSubType;
+    unsigned long KeyboardFunctionKey;
+    unsigned short imeFileName[33];
+    unsigned long ActiveInputLocale;
+    char fNoAudioPlayback;
+    char fRemoteConsoleAudio;
+    unsigned short AudioDriverName[9];
+    struct _WTS_TIME_ZONE_INFORMATION ClientTimeZone;
+    unsigned short ClientName[21];
+    unsigned long SerialNumber;
+    unsigned long ClientAddressFamily;
+    unsigned short ClientAddress[31];
+    struct _WTS_SOCKADDR ClientSockAddress;
+    unsigned short ClientDirectory[257];
+    unsigned long ClientBuildNumber;
+    unsigned short ClientProductId;
+    unsigned short OutBufCountHost;
+    unsigned short OutBufCountClient;
+    unsigned short OutBufLength;
+    unsigned long ClientSessionId;
+    unsigned short ClientDigProductId[33];
+    char fDisableCpm;
+    char fDisableCdm;
+    char fDisableCcm;
+    char fDisableLPT;
+    char fDisableClip;
+    char fDisablePNP;
+};
+
+#pragma pack(pop)
+
+#pragma pack(push, 2)
+
+struct _WTS_USER_CREDENTIAL
+{
+    unsigned short UserName[256];
+    unsigned short Password[256];
+    unsigned short Domain[256];
+};
+
+#pragma pack(pop)
+
+#pragma pack(push, 4)
+
+struct _WTS_LICENSE_CAPABILITIES
+{
+    unsigned long KeyExchangeAlg;
+    unsigned long ProtocolVer;
+    long fAuthenticateServer;
+    WTS_CERT_TYPE CertType;
+    unsigned long cbClientName;
+    unsigned char rgbClientName[42];
+};
+
+#pragma pack(pop)
+
+struct __declspec(uuid("1d6a145f-d095-4424-957a-407fae822d84"))
+IWRdsProtocolLicenseConnection : IUnknown
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT RequestLicensingCapabilities (
+        struct _WTS_LICENSE_CAPABILITIES * ppLicenseCapabilities,
+        unsigned long * pcbLicenseCapabilities );
+    HRESULT SendClientLicense (
+        unsigned char * pClientLicense,
+        unsigned long cbClientLicense );
+    HRESULT RequestClientLicense (
+        unsigned char * Reserve1,
+        unsigned long Reserve2,
+        unsigned char * ppClientLicense,
+        unsigned long * pcbClientLicense );
+    HRESULT ProtocolComplete (
+        unsigned long ulComplete );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_RequestLicensingCapabilities (
+        /*[out]*/ struct _WTS_LICENSE_CAPABILITIES * ppLicenseCapabilities,
+        /*[in,out]*/ unsigned long * pcbLicenseCapabilities ) = 0;
+      virtual HRESULT __stdcall raw_SendClientLicense (
+        /*[in]*/ unsigned char * pClientLicense,
+        /*[in]*/ unsigned long cbClientLicense ) = 0;
+      virtual HRESULT __stdcall raw_RequestClientLicense (
+        /*[in]*/ unsigned char * Reserve1,
+        /*[in]*/ unsigned long Reserve2,
+        /*[out]*/ unsigned char * ppClientLicense,
+        /*[in,out]*/ unsigned long * pcbClientLicense ) = 0;
+      virtual HRESULT __stdcall raw_ProtocolComplete (
+        /*[in]*/ unsigned long ulComplete ) = 0;
+};
+
+enum __MIDL___MIDL_itf_vc140_0002_1265_0011
+{
+    WTS_CERT_TYPE_INVALID = 0,
+    WTS_CERT_TYPE_PROPRIETORY = 1,
+    WTS_CERT_TYPE_X509 = 2
+};
+
+#pragma pack(push, 4)
+
+struct _WTS_SESSION_ID
+{
+    GUID SessionUniqueGuid;
+    unsigned long SessionId;
+};
+
+#pragma pack(pop)
+
+enum _WRDS_CONNECTION_SETTING_LEVEL
+{
+    WRDS_CONNECTION_SETTING_LEVEL_INVALID = 0,
+    WRDS_CONNECTION_SETTING_LEVEL_1 = 1
+};
+
+#pragma pack(push, 4)
+
+struct _WRDS_CONNECTION_SETTINGS_1
+{
+    char fInheritInitialProgram;
+    char fInheritColorDepth;
+    char fHideTitleBar;
+    char fInheritAutoLogon;
+    char fMaximizeShell;
+    char fDisablePNP;
+    char fPasswordIsScPin;
+    char fPromptForPassword;
+    char fDisableCpm;
+    char fDisableCdm;
+    char fDisableCcm;
+    char fDisableLPT;
+    char fDisableClip;
+    char fResetBroken;
+    char fDisableEncryption;
+    char fDisableAutoReconnect;
+    char fDisableCtrlAltDel;
+    char fDoubleClickDetect;
+    char fEnableWindowsKey;
+    char fUsingSavedCreds;
+    char fMouse;
+    char fNoAudioPlayback;
+    char fRemoteConsoleAudio;
+    unsigned char EncryptionLevel;
+    unsigned short ColorDepth;
+    unsigned short ProtocolType;
+    unsigned short HRes;
+    unsigned short VRes;
+    unsigned short ClientProductId;
+    unsigned short OutBufCountHost;
+    unsigned short OutBufCountClient;
+    unsigned short OutBufLength;
+    unsigned long KeyboardLayout;
+    unsigned long MaxConnectionTime;
+    unsigned long MaxDisconnectionTime;
+    unsigned long MaxIdleTime;
+    unsigned long PerformanceFlags;
+    unsigned long KeyboardType;
+    unsigned long KeyboardSubType;
+    unsigned long KeyboardFunctionKey;
+    unsigned long ActiveInputLocale;
+    unsigned long SerialNumber;
+    unsigned long ClientAddressFamily;
+    unsigned long ClientBuildNumber;
+    unsigned long ClientSessionId;
+    unsigned short WorkDirectory[257];
+    unsigned short InitialProgram[257];
+    unsigned short UserName[256];
+    unsigned short Domain[256];
+    unsigned short Password[256];
+    unsigned short ProtocolName[9];
+    unsigned short DisplayDriverName[9];
+    unsigned short DisplayDeviceName[20];
+    unsigned short imeFileName[33];
+    unsigned short AudioDriverName[9];
+    unsigned short ClientName[21];
+    unsigned short ClientAddress[31];
+    unsigned short ClientDirectory[257];
+    unsigned short ClientDigProductId[33];
+    struct _WTS_SOCKADDR ClientSockAddress;
+    struct _WTS_TIME_ZONE_INFORMATION ClientTimeZone;
+    struct _WRDS_LISTENER_SETTINGS WRdsListenerSettings;
+    GUID EventLogActivityId;
+    unsigned long ContextSize;
+    unsigned char * ContextData;
+};
+
+#pragma pack(pop)
+
+#pragma pack(push, 4)
+
+union _WRDS_CONNECTION_SETTING
+{
+    struct _WRDS_CONNECTION_SETTINGS_1 WRdsConnectionSettings1;
+};
+
+#pragma pack(pop)
+
+#pragma pack(push, 4)
+
+struct _WRDS_CONNECTION_SETTINGS
+{
+    enum _WRDS_CONNECTION_SETTING_LEVEL WRdsConnectionSettingLevel;
+    union _WRDS_CONNECTION_SETTING WRdsConnectionSetting;
+};
+
+#pragma pack(pop)
+
+#pragma pack(push, 4)
+
+struct _WTS_PROTOCOL_COUNTERS
+{
+    unsigned long WdBytes;
+    unsigned long WdFrames;
+    unsigned long WaitForOutBuf;
+    unsigned long Frames;
+    unsigned long Bytes;
+    unsigned long CompressedBytes;
+    unsigned long CompressFlushes;
+    unsigned long Errors;
+    unsigned long Timeouts;
+    unsigned long AsyncFramingError;
+    unsigned long AsyncOverrunError;
+    unsigned long AsyncOverflowError;
+    unsigned long AsyncParityError;
+    unsigned long TdErrors;
+    unsigned short ProtocolType;
+    unsigned short Length;
+    unsigned short Specific;
+    unsigned long Reserved[100];
+};
+
+#pragma pack(pop)
+
+#pragma pack(push, 4)
+
+struct _WTS_PROTOCOL_CACHE
+{
+    unsigned long CacheReads;
+    unsigned long CacheHits;
+};
+
+#pragma pack(pop)
+
+#pragma pack(push, 4)
+
+union _WTS_CACHE_STATS_UN
+{
+    struct _WTS_PROTOCOL_CACHE ProtocolCache[4];
+    unsigned long TShareCacheStats;
+    unsigned long Reserved[20];
+};
+
+#pragma pack(pop)
+
+#pragma pack(push, 4)
+
+struct _WTS_CACHE_STATS
+{
+    unsigned long Specific;
+    union _WTS_CACHE_STATS_UN Data;
+    unsigned short ProtocolType;
+    unsigned short Length;
+};
+
+#pragma pack(pop)
+
+#pragma pack(push, 8)
+
+struct _WTS_PROTOCOL_STATUS
+{
+    struct _WTS_PROTOCOL_COUNTERS Output;
+    struct _WTS_PROTOCOL_COUNTERS Input;
+    struct _WTS_CACHE_STATS Cache;
+    unsigned long AsyncSignal;
+    unsigned long AsyncSignalMask;
+    struct _LARGE_INTEGER Counters[100];
+};
+
+#pragma pack(pop)
+
+#pragma pack(push, 4)
+
+struct __MIDL___MIDL_itf_vc140_0002_1265_0008
+{
+    unsigned long size;
+    LPWSTR pstrVal;
+};
+
+#pragma pack(pop)
+
+#pragma pack(push, 4)
+
+struct __MIDL___MIDL_itf_vc140_0002_1265_0009
+{
+    unsigned long size;
+    char * pbVal;
+};
+
+#pragma pack(pop)
+
+#pragma pack(push, 4)
+
+union __MIDL___MIDL_itf_vc140_0002_1265_0010
+{
+    unsigned long ulVal;
+    struct __MIDL___MIDL_itf_vc140_0002_1265_0008 strVal;
+    struct __MIDL___MIDL_itf_vc140_0002_1265_0009 bVal;
+    GUID guidVal;
+};
+
+#pragma pack(pop)
+
+#pragma pack(push, 4)
+
+struct __MIDL___MIDL_itf_vc140_0002_1265_0007
+{
+    unsigned short Type;
+    union __MIDL___MIDL_itf_vc140_0002_1265_0010 u;
+};
+
+#pragma pack(pop)
+
+#pragma pack(push, 4)
+
+struct __WTS_PROPERTY_VALUE
+{
+    struct __MIDL___MIDL_itf_vc140_0002_1265_0007 __MIDL____MIDL_itf_vc140_0002_12650001;
+};
+
+#pragma pack(pop)
+
+struct __declspec(uuid("e0667ce0-0372-40d6-adb2-a0f3322674d6"))
+IWRdsProtocolShadowCallback : IUnknown
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT StopShadow ( );
+    HRESULT InvokeTargetShadow (
+        LPWSTR pTargetServerName,
+        unsigned long TargetSessionId,
+        unsigned char * pParam1,
+        unsigned long Param1Size,
+        unsigned char * pParam2,
+        unsigned long Param2Size,
+        unsigned char * pParam3,
+        unsigned long Param3Size,
+        unsigned char * pParam4,
+        unsigned long Param4Size,
+        LPWSTR pClientName );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_StopShadow ( ) = 0;
+      virtual HRESULT __stdcall raw_InvokeTargetShadow (
+        /*[in]*/ LPWSTR pTargetServerName,
+        /*[in]*/ unsigned long TargetSessionId,
+        /*[in]*/ unsigned char * pParam1,
+        /*[in]*/ unsigned long Param1Size,
+        /*[in]*/ unsigned char * pParam2,
+        /*[in]*/ unsigned long Param2Size,
+        /*[in]*/ unsigned char * pParam3,
+        /*[in]*/ unsigned long Param3Size,
+        /*[in]*/ unsigned char * pParam4,
+        /*[in]*/ unsigned long Param4Size,
+        /*[in]*/ LPWSTR pClientName ) = 0;
+};
+
+struct __declspec(uuid("9ae85ce6-cade-4548-8feb-99016597f60a"))
+IWRdsProtocolShadowConnection : IUnknown
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT Start (
+        LPWSTR pTargetServerName,
+        unsigned long TargetSessionId,
+        unsigned char HotKeyVk,
+        unsigned short HotkeyModifiers,
+        struct IWRdsProtocolShadowCallback * pShadowCallback );
+    HRESULT Stop ( );
+    HRESULT DoTarget (
+        unsigned char * pParam1,
+        unsigned long Param1Size,
+        unsigned char * pParam2,
+        unsigned long Param2Size,
+        unsigned char * pParam3,
+        unsigned long Param3Size,
+        unsigned char * pParam4,
+        unsigned long Param4Size,
+        LPWSTR pClientName );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_Start (
+        /*[in]*/ LPWSTR pTargetServerName,
+        /*[in]*/ unsigned long TargetSessionId,
+        /*[in]*/ unsigned char HotKeyVk,
+        /*[in]*/ unsigned short HotkeyModifiers,
+        /*[in]*/ struct IWRdsProtocolShadowCallback * pShadowCallback ) = 0;
+      virtual HRESULT __stdcall raw_Stop ( ) = 0;
+      virtual HRESULT __stdcall raw_DoTarget (
+        /*[in]*/ unsigned char * pParam1,
+        /*[in]*/ unsigned long Param1Size,
+        /*[in]*/ unsigned char * pParam2,
+        /*[in]*/ unsigned long Param2Size,
+        /*[in]*/ unsigned char * pParam3,
+        /*[in]*/ unsigned long Param3Size,
+        /*[in]*/ unsigned char * pParam4,
+        /*[in]*/ unsigned long Param4Size,
+        /*[in]*/ LPWSTR pClientName ) = 0;
+};
+
+struct __declspec(uuid("324ed94f-fdaf-4ff6-81a8-42abe755830b"))
+IWRdsProtocolConnection : IUnknown
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT GetLogonErrorRedirector (
+        struct IWRdsProtocolLogonErrorRedirector * * ppLogonErrorRedir );
+    HRESULT AcceptConnection ( );
+    HRESULT GetClientData (
+        struct _WTS_CLIENT_DATA * pClientData );
+    HRESULT GetClientMonitorData (
+        unsigned int * pNumMonitors,
+        unsigned int * pPrimaryMonitor );
+    HRESULT GetUserCredentials (
+        struct _WTS_USER_CREDENTIAL * pUserCreds );
+    HRESULT GetLicenseConnection (
+        struct IWRdsProtocolLicenseConnection * * ppLicenseConnection );
+    HRESULT AuthenticateClientToSession (
+        struct _WTS_SESSION_ID * SessionId );
+    HRESULT NotifySessionId (
+        struct _WTS_SESSION_ID * SessionId,
+        unsigned long SessionHandle );
+    HRESULT GetInputHandles (
+        unsigned long * pKeyboardHandle,
+        unsigned long * pMouseHandle,
+        unsigned long * pBeepHandle );
+    HRESULT GetVideoHandle (
+        unsigned long * pVideoHandle );
+    HRESULT ConnectNotify (
+        unsigned long SessionId );
+    HRESULT IsUserAllowedToLogon (
+        unsigned long SessionId,
+        unsigned long UserToken,
+        LPWSTR pDomainName,
+        LPWSTR pUserName );
+    HRESULT SessionArbitrationEnumeration (
+        unsigned long hUserToken,
+        long bSingleSessionPerUserEnabled,
+        unsigned long * pSessionIdArray,
+        unsigned long * pdwSessionIdentifierCount );
+    HRESULT LogonNotify (
+        unsigned long hClientToken,
+        LPWSTR wszUserName,
+        LPWSTR wszDomainName,
+        struct _WTS_SESSION_ID * SessionId,
+        struct _WRDS_CONNECTION_SETTINGS * pWRdsConnectionSettings );
+    HRESULT PreDisconnect (
+        unsigned long DisconnectReason );
+    HRESULT DisconnectNotify ( );
+    HRESULT Close ( );
+    HRESULT GetProtocolStatus (
+        struct _WTS_PROTOCOL_STATUS * pProtocolStatus );
+    HRESULT GetLastInputTime (
+        unsigned __int64 * pLastInputTime );
+    HRESULT SetErrorInfo (
+        unsigned long ulError );
+    HRESULT CreateVirtualChannel (
+        LPSTR szEndpointName,
+        long bStatic,
+        unsigned long RequestedPriority,
+        ULONG_PTR * phChannel );
+    HRESULT QueryProperty (
+        GUID QueryType,
+        unsigned long ulNumEntriesIn,
+        unsigned long ulNumEntriesOut,
+        struct __WTS_PROPERTY_VALUE * pPropertyEntriesIn,
+        struct __WTS_PROPERTY_VALUE * pPropertyEntriesOut );
+    HRESULT GetShadowConnection (
+        struct IWRdsProtocolShadowConnection * * ppShadowConnection );
+    HRESULT NotifyCommandProcessCreated (
+        unsigned long SessionId );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_GetLogonErrorRedirector (
+        /*[out]*/ struct IWRdsProtocolLogonErrorRedirector * * ppLogonErrorRedir ) = 0;
+      virtual HRESULT __stdcall raw_AcceptConnection ( ) = 0;
+      virtual HRESULT __stdcall raw_GetClientData (
+        /*[out]*/ struct _WTS_CLIENT_DATA * pClientData ) = 0;
+      virtual HRESULT __stdcall raw_GetClientMonitorData (
+        /*[out]*/ unsigned int * pNumMonitors,
+        /*[out]*/ unsigned int * pPrimaryMonitor ) = 0;
+      virtual HRESULT __stdcall raw_GetUserCredentials (
+        /*[out]*/ struct _WTS_USER_CREDENTIAL * pUserCreds ) = 0;
+      virtual HRESULT __stdcall raw_GetLicenseConnection (
+        /*[out]*/ struct IWRdsProtocolLicenseConnection * * ppLicenseConnection ) = 0;
+      virtual HRESULT __stdcall raw_AuthenticateClientToSession (
+        /*[out]*/ struct _WTS_SESSION_ID * SessionId ) = 0;
+      virtual HRESULT __stdcall raw_NotifySessionId (
+        /*[in]*/ struct _WTS_SESSION_ID * SessionId,
+        /*[in]*/ unsigned long SessionHandle ) = 0;
+      virtual HRESULT __stdcall raw_GetInputHandles (
+        /*[out]*/ unsigned long * pKeyboardHandle,
+        /*[out]*/ unsigned long * pMouseHandle,
+        /*[out]*/ unsigned long * pBeepHandle ) = 0;
+      virtual HRESULT __stdcall raw_GetVideoHandle (
+        /*[out]*/ unsigned long * pVideoHandle ) = 0;
+      virtual HRESULT __stdcall raw_ConnectNotify (
+        /*[in]*/ unsigned long SessionId ) = 0;
+      virtual HRESULT __stdcall raw_IsUserAllowedToLogon (
+        /*[in]*/ unsigned long SessionId,
+        /*[in]*/ unsigned long UserToken,
+        /*[in]*/ LPWSTR pDomainName,
+        /*[in]*/ LPWSTR pUserName ) = 0;
+      virtual HRESULT __stdcall raw_SessionArbitrationEnumeration (
+        /*[in]*/ unsigned long hUserToken,
+        /*[in]*/ long bSingleSessionPerUserEnabled,
+        /*[out]*/ unsigned long * pSessionIdArray,
+        /*[in,out]*/ unsigned long * pdwSessionIdentifierCount ) = 0;
+      virtual HRESULT __stdcall raw_LogonNotify (
+        /*[in]*/ unsigned long hClientToken,
+        /*[in]*/ LPWSTR wszUserName,
+        /*[in]*/ LPWSTR wszDomainName,
+        /*[in]*/ struct _WTS_SESSION_ID * SessionId,
+        /*[in,out]*/ struct _WRDS_CONNECTION_SETTINGS * pWRdsConnectionSettings ) = 0;
+      virtual HRESULT __stdcall raw_PreDisconnect (
+        /*[in]*/ unsigned long DisconnectReason ) = 0;
+      virtual HRESULT __stdcall raw_DisconnectNotify ( ) = 0;
+      virtual HRESULT __stdcall raw_Close ( ) = 0;
+      virtual HRESULT __stdcall raw_GetProtocolStatus (
+        /*[out]*/ struct _WTS_PROTOCOL_STATUS * pProtocolStatus ) = 0;
+      virtual HRESULT __stdcall raw_GetLastInputTime (
+        /*[out]*/ unsigned __int64 * pLastInputTime ) = 0;
+      virtual HRESULT __stdcall raw_SetErrorInfo (
+        /*[in]*/ unsigned long ulError ) = 0;
+      virtual HRESULT __stdcall raw_CreateVirtualChannel (
+        /*[in]*/ LPSTR szEndpointName,
+        /*[in]*/ long bStatic,
+        /*[in]*/ unsigned long RequestedPriority,
+        /*[out]*/ ULONG_PTR * phChannel ) = 0;
+      virtual HRESULT __stdcall raw_QueryProperty (
+        /*[in]*/ GUID QueryType,
+        /*[in]*/ unsigned long ulNumEntriesIn,
+        /*[in]*/ unsigned long ulNumEntriesOut,
+        /*[in]*/ struct __WTS_PROPERTY_VALUE * pPropertyEntriesIn,
+        /*[out]*/ struct __WTS_PROPERTY_VALUE * pPropertyEntriesOut ) = 0;
+      virtual HRESULT __stdcall raw_GetShadowConnection (
+        /*[out]*/ struct IWRdsProtocolShadowConnection * * ppShadowConnection ) = 0;
+      virtual HRESULT __stdcall raw_NotifyCommandProcessCreated (
+        /*[in]*/ unsigned long SessionId ) = 0;
+};
+
+#pragma pack(push, 2)
+
+struct _WTS_SMALL_RECT
+{
+    short Left;
+    short Top;
+    short Right;
+    short Bottom;
+};
+
+#pragma pack(pop)
+
+struct __declspec(uuid("f1d70332-d070-4ef1-a088-78313536c2d6"))
+IWRdsProtocolConnectionCallback : IUnknown
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT OnReady ( );
+    HRESULT BrokenConnection (
+        unsigned long Reason,
+        unsigned long Source );
+    HRESULT StopScreenUpdates ( );
+    HRESULT RedrawWindow (
+        struct _WTS_SMALL_RECT * rect );
+    HRESULT GetConnectionId (
+        unsigned long * pConnectionId );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_OnReady ( ) = 0;
+      virtual HRESULT __stdcall raw_BrokenConnection (
+        /*[in]*/ unsigned long Reason,
+        /*[in]*/ unsigned long Source ) = 0;
+      virtual HRESULT __stdcall raw_StopScreenUpdates ( ) = 0;
+      virtual HRESULT __stdcall raw_RedrawWindow (
+        /*[in]*/ struct _WTS_SMALL_RECT * rect ) = 0;
+      virtual HRESULT __stdcall raw_GetConnectionId (
+        /*[out]*/ unsigned long * pConnectionId ) = 0;
+};
+
+struct __declspec(uuid("3ab27e5b-4449-4dc1-b74a-91621d4fe984"))
+IWRdsProtocolListenerCallback : IUnknown
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT OnConnected (
+        struct IWRdsProtocolConnection * pConnection,
+        struct _WRDS_CONNECTION_SETTINGS * pWRdsConnectionSettings,
+        struct IWRdsProtocolConnectionCallback * * pCallback );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_OnConnected (
+        /*[in]*/ struct IWRdsProtocolConnection * pConnection,
+        /*[in]*/ struct _WRDS_CONNECTION_SETTINGS * pWRdsConnectionSettings,
+        /*[out]*/ struct IWRdsProtocolConnectionCallback * * pCallback ) = 0;
+};
+
+struct __declspec(uuid("fcbc131b-c686-451d-a773-e279e230f540"))
+IWRdsProtocolListener : IUnknown
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT GetSettings (
+        enum _WRDS_LISTENER_SETTING_LEVEL WRdsListenerSettingLevel,
+        struct _WRDS_LISTENER_SETTINGS * pWRdsListenerSettings );
+    HRESULT StartListen (
+        struct IWRdsProtocolListenerCallback * pCallback );
+    HRESULT StopListen ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_GetSettings (
+        /*[in]*/ enum _WRDS_LISTENER_SETTING_LEVEL WRdsListenerSettingLevel,
+        /*[out]*/ struct _WRDS_LISTENER_SETTINGS * pWRdsListenerSettings ) = 0;
+      virtual HRESULT __stdcall raw_StartListen (
+        /*[in]*/ struct IWRdsProtocolListenerCallback * pCallback ) = 0;
+      virtual HRESULT __stdcall raw_StopListen ( ) = 0;
+};
+
+struct __declspec(uuid("103ff9d9-8bc9-4ea8-8cd4-c1e627d04358"))
+IObject1 : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    int GetANum ( );
+    HRESULT Uninitialize ( );
+    HRESULT CreateListener (
+        unsigned short * wszListenerName,
+        struct IWRdsProtocolListener * * pProtocolListener );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_GetANum (
+        /*[out,retval]*/ int * pInt ) = 0;
+      virtual HRESULT __stdcall raw_Uninitialize ( ) = 0;
+      virtual HRESULT __stdcall raw_CreateListener (
+        /*[in]*/ unsigned short * wszListenerName,
+        /*[out]*/ struct IWRdsProtocolListener * * pProtocolListener ) = 0;
+};
+
+//
+// Wrapper method implementations
+//
+
+#include "c:\users\jambak\source\comsrv\vc140.tli"
+
+#pragma pack(pop)

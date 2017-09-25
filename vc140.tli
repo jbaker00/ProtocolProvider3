@@ -1,0 +1,339 @@
+﻿// Created by Microsoft (R) C/C++ Compiler Version 14.11.25508.2 (038215d3).
+//
+// c:\users\jambak\source\comsrv\vc140.tli
+//
+// Wrapper implementations for Win32 type library vc140.tlb
+// compiler-generated file created 09/14/17 at 16:59:37 - DO NOT EDIT!
+
+#pragma once
+
+//
+// interface IWRdsProtocolLogonErrorRedirector wrapper method implementations
+//
+
+inline HRESULT IWRdsProtocolLogonErrorRedirector::OnBeginPainting ( ) {
+    HRESULT _hr = raw_OnBeginPainting();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IWRdsProtocolLogonErrorRedirector::RedirectStatus ( LPWSTR pszMessage, enum _WTS_LOGON_ERROR_REDIRECTOR_RESPONSE * pResponse ) {
+    HRESULT _hr = raw_RedirectStatus(pszMessage, pResponse);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IWRdsProtocolLogonErrorRedirector::RedirectMessage ( LPWSTR pszCaption, LPWSTR pszMessage, unsigned int uType, enum _WTS_LOGON_ERROR_REDIRECTOR_RESPONSE * pResponse ) {
+    HRESULT _hr = raw_RedirectMessage(pszCaption, pszMessage, uType, pResponse);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IWRdsProtocolLogonErrorRedirector::RedirectLogonError ( long ntsStatus, long ntsSubstatus, LPWSTR pszCaption, LPWSTR pszMessage, unsigned int uType, enum _WTS_LOGON_ERROR_REDIRECTOR_RESPONSE * pResponse ) {
+    HRESULT _hr = raw_RedirectLogonError(ntsStatus, ntsSubstatus, pszCaption, pszMessage, uType, pResponse);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IWRdsProtocolLicenseConnection wrapper method implementations
+//
+
+inline HRESULT IWRdsProtocolLicenseConnection::RequestLicensingCapabilities ( struct _WTS_LICENSE_CAPABILITIES * ppLicenseCapabilities, unsigned long * pcbLicenseCapabilities ) {
+    HRESULT _hr = raw_RequestLicensingCapabilities(ppLicenseCapabilities, pcbLicenseCapabilities);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IWRdsProtocolLicenseConnection::SendClientLicense ( unsigned char * pClientLicense, unsigned long cbClientLicense ) {
+    HRESULT _hr = raw_SendClientLicense(pClientLicense, cbClientLicense);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IWRdsProtocolLicenseConnection::RequestClientLicense ( unsigned char * Reserve1, unsigned long Reserve2, unsigned char * ppClientLicense, unsigned long * pcbClientLicense ) {
+    HRESULT _hr = raw_RequestClientLicense(Reserve1, Reserve2, ppClientLicense, pcbClientLicense);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IWRdsProtocolLicenseConnection::ProtocolComplete ( unsigned long ulComplete ) {
+    HRESULT _hr = raw_ProtocolComplete(ulComplete);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IWRdsProtocolShadowCallback wrapper method implementations
+//
+
+inline HRESULT IWRdsProtocolShadowCallback::StopShadow ( ) {
+    HRESULT _hr = raw_StopShadow();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IWRdsProtocolShadowCallback::InvokeTargetShadow ( LPWSTR pTargetServerName, unsigned long TargetSessionId, unsigned char * pParam1, unsigned long Param1Size, unsigned char * pParam2, unsigned long Param2Size, unsigned char * pParam3, unsigned long Param3Size, unsigned char * pParam4, unsigned long Param4Size, LPWSTR pClientName ) {
+    HRESULT _hr = raw_InvokeTargetShadow(pTargetServerName, TargetSessionId, pParam1, Param1Size, pParam2, Param2Size, pParam3, Param3Size, pParam4, Param4Size, pClientName);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IWRdsProtocolShadowConnection wrapper method implementations
+//
+
+inline HRESULT IWRdsProtocolShadowConnection::Start ( LPWSTR pTargetServerName, unsigned long TargetSessionId, unsigned char HotKeyVk, unsigned short HotkeyModifiers, struct IWRdsProtocolShadowCallback * pShadowCallback ) {
+    HRESULT _hr = raw_Start(pTargetServerName, TargetSessionId, HotKeyVk, HotkeyModifiers, pShadowCallback);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IWRdsProtocolShadowConnection::Stop ( ) {
+    HRESULT _hr = raw_Stop();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IWRdsProtocolShadowConnection::DoTarget ( unsigned char * pParam1, unsigned long Param1Size, unsigned char * pParam2, unsigned long Param2Size, unsigned char * pParam3, unsigned long Param3Size, unsigned char * pParam4, unsigned long Param4Size, LPWSTR pClientName ) {
+    HRESULT _hr = raw_DoTarget(pParam1, Param1Size, pParam2, Param2Size, pParam3, Param3Size, pParam4, Param4Size, pClientName);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IWRdsProtocolConnection wrapper method implementations
+//
+
+inline HRESULT IWRdsProtocolConnection::GetLogonErrorRedirector ( struct IWRdsProtocolLogonErrorRedirector * * ppLogonErrorRedir ) {
+    HRESULT _hr = raw_GetLogonErrorRedirector(ppLogonErrorRedir);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IWRdsProtocolConnection::AcceptConnection ( ) {
+    HRESULT _hr = raw_AcceptConnection();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IWRdsProtocolConnection::GetClientData ( struct _WTS_CLIENT_DATA * pClientData ) {
+    HRESULT _hr = raw_GetClientData(pClientData);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IWRdsProtocolConnection::GetClientMonitorData ( unsigned int * pNumMonitors, unsigned int * pPrimaryMonitor ) {
+    HRESULT _hr = raw_GetClientMonitorData(pNumMonitors, pPrimaryMonitor);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IWRdsProtocolConnection::GetUserCredentials ( struct _WTS_USER_CREDENTIAL * pUserCreds ) {
+    HRESULT _hr = raw_GetUserCredentials(pUserCreds);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IWRdsProtocolConnection::GetLicenseConnection ( struct IWRdsProtocolLicenseConnection * * ppLicenseConnection ) {
+    HRESULT _hr = raw_GetLicenseConnection(ppLicenseConnection);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IWRdsProtocolConnection::AuthenticateClientToSession ( struct _WTS_SESSION_ID * SessionId ) {
+    HRESULT _hr = raw_AuthenticateClientToSession(SessionId);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IWRdsProtocolConnection::NotifySessionId ( struct _WTS_SESSION_ID * SessionId, unsigned long SessionHandle ) {
+    HRESULT _hr = raw_NotifySessionId(SessionId, SessionHandle);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IWRdsProtocolConnection::GetInputHandles ( unsigned long * pKeyboardHandle, unsigned long * pMouseHandle, unsigned long * pBeepHandle ) {
+    HRESULT _hr = raw_GetInputHandles(pKeyboardHandle, pMouseHandle, pBeepHandle);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IWRdsProtocolConnection::GetVideoHandle ( unsigned long * pVideoHandle ) {
+    HRESULT _hr = raw_GetVideoHandle(pVideoHandle);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IWRdsProtocolConnection::ConnectNotify ( unsigned long SessionId ) {
+    HRESULT _hr = raw_ConnectNotify(SessionId);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IWRdsProtocolConnection::IsUserAllowedToLogon ( unsigned long SessionId, unsigned long UserToken, LPWSTR pDomainName, LPWSTR pUserName ) {
+    HRESULT _hr = raw_IsUserAllowedToLogon(SessionId, UserToken, pDomainName, pUserName);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IWRdsProtocolConnection::SessionArbitrationEnumeration ( unsigned long hUserToken, long bSingleSessionPerUserEnabled, unsigned long * pSessionIdArray, unsigned long * pdwSessionIdentifierCount ) {
+    HRESULT _hr = raw_SessionArbitrationEnumeration(hUserToken, bSingleSessionPerUserEnabled, pSessionIdArray, pdwSessionIdentifierCount);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IWRdsProtocolConnection::LogonNotify ( unsigned long hClientToken, LPWSTR wszUserName, LPWSTR wszDomainName, struct _WTS_SESSION_ID * SessionId, struct _WRDS_CONNECTION_SETTINGS * pWRdsConnectionSettings ) {
+    HRESULT _hr = raw_LogonNotify(hClientToken, wszUserName, wszDomainName, SessionId, pWRdsConnectionSettings);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IWRdsProtocolConnection::PreDisconnect ( unsigned long DisconnectReason ) {
+    HRESULT _hr = raw_PreDisconnect(DisconnectReason);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IWRdsProtocolConnection::DisconnectNotify ( ) {
+    HRESULT _hr = raw_DisconnectNotify();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IWRdsProtocolConnection::Close ( ) {
+    HRESULT _hr = raw_Close();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IWRdsProtocolConnection::GetProtocolStatus ( struct _WTS_PROTOCOL_STATUS * pProtocolStatus ) {
+    HRESULT _hr = raw_GetProtocolStatus(pProtocolStatus);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IWRdsProtocolConnection::GetLastInputTime ( unsigned __int64 * pLastInputTime ) {
+    HRESULT _hr = raw_GetLastInputTime(pLastInputTime);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IWRdsProtocolConnection::SetErrorInfo ( unsigned long ulError ) {
+    HRESULT _hr = raw_SetErrorInfo(ulError);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IWRdsProtocolConnection::CreateVirtualChannel ( LPSTR szEndpointName, long bStatic, unsigned long RequestedPriority, ULONG_PTR * phChannel ) {
+    HRESULT _hr = raw_CreateVirtualChannel(szEndpointName, bStatic, RequestedPriority, phChannel);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IWRdsProtocolConnection::QueryProperty ( GUID QueryType, unsigned long ulNumEntriesIn, unsigned long ulNumEntriesOut, struct __WTS_PROPERTY_VALUE * pPropertyEntriesIn, struct __WTS_PROPERTY_VALUE * pPropertyEntriesOut ) {
+    HRESULT _hr = raw_QueryProperty(QueryType, ulNumEntriesIn, ulNumEntriesOut, pPropertyEntriesIn, pPropertyEntriesOut);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IWRdsProtocolConnection::GetShadowConnection ( struct IWRdsProtocolShadowConnection * * ppShadowConnection ) {
+    HRESULT _hr = raw_GetShadowConnection(ppShadowConnection);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IWRdsProtocolConnection::NotifyCommandProcessCreated ( unsigned long SessionId ) {
+    HRESULT _hr = raw_NotifyCommandProcessCreated(SessionId);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IWRdsProtocolConnectionCallback wrapper method implementations
+//
+
+inline HRESULT IWRdsProtocolConnectionCallback::OnReady ( ) {
+    HRESULT _hr = raw_OnReady();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IWRdsProtocolConnectionCallback::BrokenConnection ( unsigned long Reason, unsigned long Source ) {
+    HRESULT _hr = raw_BrokenConnection(Reason, Source);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IWRdsProtocolConnectionCallback::StopScreenUpdates ( ) {
+    HRESULT _hr = raw_StopScreenUpdates();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IWRdsProtocolConnectionCallback::RedrawWindow ( struct _WTS_SMALL_RECT * rect ) {
+    HRESULT _hr = raw_RedrawWindow(rect);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IWRdsProtocolConnectionCallback::GetConnectionId ( unsigned long * pConnectionId ) {
+    HRESULT _hr = raw_GetConnectionId(pConnectionId);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IWRdsProtocolListenerCallback wrapper method implementations
+//
+
+inline HRESULT IWRdsProtocolListenerCallback::OnConnected ( struct IWRdsProtocolConnection * pConnection, struct _WRDS_CONNECTION_SETTINGS * pWRdsConnectionSettings, struct IWRdsProtocolConnectionCallback * * pCallback ) {
+    HRESULT _hr = raw_OnConnected(pConnection, pWRdsConnectionSettings, pCallback);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IWRdsProtocolListener wrapper method implementations
+//
+
+inline HRESULT IWRdsProtocolListener::GetSettings ( enum _WRDS_LISTENER_SETTING_LEVEL WRdsListenerSettingLevel, struct _WRDS_LISTENER_SETTINGS * pWRdsListenerSettings ) {
+    HRESULT _hr = raw_GetSettings(WRdsListenerSettingLevel, pWRdsListenerSettings);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IWRdsProtocolListener::StartListen ( struct IWRdsProtocolListenerCallback * pCallback ) {
+    HRESULT _hr = raw_StartListen(pCallback);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IWRdsProtocolListener::StopListen ( ) {
+    HRESULT _hr = raw_StopListen();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IObject1 wrapper method implementations
+//
+
+inline int IObject1::GetANum ( ) {
+    int _result = 0;
+    HRESULT _hr = raw_GetANum(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT IObject1::Uninitialize ( ) {
+    HRESULT _hr = raw_Uninitialize();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IObject1::CreateListener ( unsigned short * wszListenerName, struct IWRdsProtocolListener * * pProtocolListener ) {
+    HRESULT _hr = raw_CreateListener(wszListenerName, pProtocolListener);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
